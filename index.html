@@ -143,6 +143,45 @@
       nav a {
         flex: 1 1 100%;
         text-align: center;
+/* Journey Timeline */
+.journey-section {
+  animation: fadeSlide 1.2s ease-in-out;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding: 15px 15px 15px 35px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #4CAF50;
+  border-radius: 5px;
+  animation: slideInLeft 0.7s ease;
+}
+
+.timeline li span {
+  font-weight: bold;
+  color: #2E8B57;
+  margin-right: 10px;
+}
+
+/* Animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
       }
     }
   </style>
@@ -185,16 +224,14 @@
       </ul>
     </section>
 
-    <section id="gallery" class="card">
-      <h2>Image Gallery</h2>
-      <div class="gallery">
-        <img src="IMG-20240514-WA0000.jpg" alt="Gallery 1" />
-        <img src="IMG-20240514-WA0001.jpg" alt="Gallery 2" />
-        <img src="20250225_104016.jpg" alt="Gallery 3" />
-        <img src="IMG_4762.JPG" alt="Gallery 4" />
-      </div>
-    </section>
-
+<section id="journey" class="card journey-section">
+  <h2>My Journey</h2>
+  <ul class="timeline">
+    <li><span>2024</span> Started exploring HTML & CSS</li>
+    <li><span>2025</span> Built personal website & small projects</li>
+    <li><span>Future</span> Dive into JavaScript frameworks & backend</li>
+  </ul>
+</section>
     <section id="contact" class="card">
       <h2>Contact Me</h2>
       <form>
